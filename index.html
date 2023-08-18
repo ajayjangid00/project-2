@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://image.shutterstock.com/image-vector/amazon-internet-media-icon-website-260nw-2200304477.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Amazon.com</title>
+    <style>
+        *{
+            margin: 0;
+            font-family: Arial;
+            border: border-box;
+        }
+        /* full div tag */
+        .navigation{
+            height: 60px;
+            background-color: #0f1111;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        /* box 1 amazon logo */
+        .nav_logo{
+            height: 50px;
+            width: 100px;
+            
+        }
+        .logo{
+            background-image: url(amazon_logo.png);
+            background-size: cover;
+           
+            height: 50px;
+            width: 100px;
+        }
+        .nav_logo:hover{
+            border: 2px solid red;
+        }
+        /* border for all */
+        .border{
+            border: 1px solid transparent;
+            position: relative;
+            top: 3px;
+            left: 2.3px;
+        }
+        .border:hover{
+            border: 1px solid white;
+            
+        }
+        /* box2 loaction */
+        .deliver{
+              font-size: 0.85rem;
+              color: #cccccc;
+              margin-left: 15px;
+              margin-top: 4px;
+        }
+        .india{
+            font-size: 1rem;
+            margin-left: 3px;
+            
+           
+        }
+        .icon{
+            display: flex;
+            margin-left:30px;
+            font-size: 20px;
+           
+        }
+        .nav_addres{
+            
+            margin-top: 4px;
+            width: 100px;
+            height: 45px;
+            text-align: center;
+            margin-left: 10px;
+            
+        }
+        /* box 3 serach box */
+        .search-box{
+            display: flex;
+            
+            height: 40px;
+            width: 750px;
+            margin-top: 9.5px;
+            border-radius:4px ;
+            justify-content: space-evenly;
+            
+        }
+        .search-box:hover{
+          border: 2px solid orange;
+         
+        }
+        .search-select{
+            background-color: whitesmoke;
+            border-top-left-radius:4px ;
+            width: 60px;
+            border: none;
+            margin-left: -0.5px;
+            border-bottom-left-radius:4px ;
+        }
+        .search-select .search-list{
+            background-color: whitesmoke;
+            border-top-left-radius:4px ;
+            width: 65px;
+            text-align: center;
+            border: none;
+            border-bottom-left-radius:4px ;
+        }
+        .search-input{
+            width:100%;
+            outline: none;
+            font-size: 1rem;
+            padding-left:10px;
+            border: none;
+        }
+        .serach-icon{
+            background-color: orange;
+            outline: none;
+            width: 50px;
+            display: flex;
+            color: black;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            border-top-right-radius:4px ;
+            border-bottom-right-radius:4px;
+        }
+        /* box 4 language */
+        .language-box{
+            display: flex;
+
+            width: 75px;
+            height: 44px;
+            margin-top: 4.5px;
+        }
+        .language-box img{
+            height: 30px;
+            margin-top: 6px;
+            margin-left: 2px;
+        }
+        .language-select{
+             height: 21px;
+             width: 41px;
+             margin-top: 10px;
+             margin-left: 10px;
+        }
+        /* box 5  sign up  & account */
+       .signup-box1{
+        background-color: transparent;
+         height: 48px;
+         margin-top: 2.5px;
+         width: 160px;
+        text-align: center;
+         
+       }
+       .signup-box a{
+        color: white;
+        margin-left: -5px;
+       }
+       .signup-box1 a{
+        color: white;
+       }
+
+       span{
+        font-size: 12px;
+        margin-left: -60px;
+        
+       }
+       .style-p{
+        font-weight: bold;
+        display: flex;
+        margin-left: 10px;
+       }
+       .fa-user{
+        font-size: 10px;
+        margin-top: 5px;
+       }
+
+
+       .drop-icon{
+  background-color: transparent;
+  width: 10%;
+  display: flex;
+  
+}
+.drop-icon:hover .drop-ul{
+   display: block;
+
+}
+.drop-ul
+{
+  
+  display: none;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: -300px;
+  margin-top: 50px;
+}
+
+
+
+       /* box 6 return */
+       .signup-box2{
+        height: 48px;
+        margin-top: 2.5px;
+        width: 100px;
+       text-align: center;
+        
+      }
+      .signup-box2 span{
+        margin-left: -20px;
+      }
+      /* box7 cart */
+      .cart{
+       
+        display: flex;
+        height: 43px;
+        width: 100px;
+        margin-top: 5px;
+      }
+.cart i{
+   font-size: 40px;
+   margin-left: 10px;
+
+}
+.cart h1{
+    margin-left: 7px;
+    font-size: 20px;
+    margin-top:15px;
+}
+/* panel include all deals */
+.panel{
+    height: 40px;
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.panel-option{
+    width: 80%;
+    margin-top: -7px;
+    font-size: 14px;
+}
+.panel-option p{
+    display: inline;
+    margin-left: 20px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+    
+}
+.panel-deals{
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 5px;
+    margin-top: -7px;
+   padding-bottom: 5px;
+}
+.panel-all{
+ 
+height: 25px;
+width: 45px;
+padding-top: 9px;
+margin-top: -8px;
+}
+.panel-all i{
+    margin-left: 2px;
+}
+/* hero section */
+.hero-section{
+    background-image: url(hero_image.jpg);
+    background-size: cover;
+    height: 350px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-mesge{
+    background-color: white;
+    margin-top: 250px;
+    color: black;
+    height: 40px;
+    display: flex;
+    width: 90%;
+    font-size: 0.85rem;
+    align-items: center;
+    justify-content: center;
+}
+.hero-mesge a{
+    text-decoration: none;
+    color: #007185;
+}
+.hero-mesge a:hover{
+    color: red;
+    transition: 0.2ms;
+}
+/* accessoris box */
+  .shoping{
+display: flex;
+justify-content: space-evenly;
+background-color: #e2e7e6;
+  }
+  .box{
+    width: 23%;
+    height: 400px;
+    background-color: white;
+    padding: 20px 0px 15px;
+    border: 2px solid black;
+    margin-top: 15px;
+   
+  }
+  .box h2{
+text-align: center;
+padding: px 0px 10px;
+  }
+  .box p{
+font-size: 15px;
+  }
+  .box1-img1{
+    height: 318px;
+    background-size: cover;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .box1-content{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .box1-content .content-a{
+    color: #007185;
+    text-decoration: none;
+  }
+  .box1-content .content-a:hover {
+    color: red;
+    
+  }
+.box-img1{
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-between;
+   
+}
+.name-box1{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.name-acces{
+    
+    text-decoration: none;
+    color: black;
+}
+.name-acces:hover{
+    
+    color: red;
+}
+.box-img2{
+    display: flex;
+    justify-content: space-between;
+    
+}
+  /* full image boc */
+  .full-box{
+    display: flex;
+    width: 97%;
+    height: 290px;
+    background-color: white;
+    padding: 20px 0px 15px;
+    border: 2px solid black;
+    margin-top: 15px;
+    margin-left: 20px;
+  }
+  .full-box img{
+   margin-right: 10px;
+  padding-top: 60px;
+  
+  }
+  .shopnow{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    height: 30px;
+    margin-left: -50px;
+
+  }
+  .shopnow a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #007185;
+  
+  }
+  .shopnow a:hover{
+    color: red;
+  }
+  
+  .full-img{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -750px;
+    justify-content: space-betwe100;
+   
+   height: 200px;
+   margin-top: 50px;
+  }
+  /* big-box */
+  .big-box{
+     height: 400px;
+     border: 1px solid black;
+     background-color: white; 
+     margin-left: 25px;
+     margin-right: 20px;
+     margin-top: -25px;
+  }
+  .big-text{
+    display: flex;
+    margin-left: 25px;
+    width: 50%;
+    margin-top: 25px;
+  }
+  .big-text p a{
+    text-decoration: none; 
+  }
+  .big-text p a:hover{
+    color: red;
+   
+    
+    
+  }
+  .big-image{
+    height: 200px;  
+    margin-top: 20px;
+    margin-left: 0px;
+    
+  }
+  .big-p{
+
+    width: 100%;
+    padding-top: 5px;
+    height: 100px;
+    
+  }
+  .big-p p{
+    padding-top: 5px;
+    margin-left: 25px;
+    
+  }
+  .big-p .p1 span{
+    margin-left:-15px;
+    background-color: darkred;
+    padding: 5px 5px 5px 5px;
+    font-size: 15px;
+    color: white;
+  }
+  .big-p .p1{
+    font-size: 13px;
+    color: red;
+    width: 90%;
+    
+    
+  }
+  .big-p .p2 span{
+    margin-left: -15px;
+  }
+  .big-p .p2 span big{
+      font-size: 25px;
+  }
+  .big-p .p3{
+    
+    margin-left: 10px;
+    width: 100%;
+    font-size: 13px;
+  }
+  .my-box{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .single-imge{
+    background-color: white;
+    border: 2px solid black;
+    height: 280px;
+    margin-left: 22px;
+     margin-right: 20px;
+     margin-top: -25px;
+     display: flex;
+  }
+  .single-imge h2{
+    
+    height: 30px;
+    
+    width: 500px;
+  }
+  .images-box{
+   
+    width: 100%;
+    height: 200px;
+    display: flex;
+   margin-left: -513px;
+   margin-top: 65px;
+  }
+  .single-box-text{
+    background-color: transparent;
+    height:30px ;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-left:;
+  }
+  .single-box-text h2 span{
+    margin-left: 25px;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .single-box-text a{
+    text-decoration: none;
+    color: black;
+  }
+  .single-box-text a:hover{
+    color: red;
+  }
+
+  /* Rating box design */
+  .rating-box{
+    border: 2px solid black;
+    background-color: white;
+    height: 400px;
+    margin-left: 22px;
+     margin-right: 20px;
+     margin-top: -25px;
+     padding-left: 35px;
+     display: flex;
+  }
+  .rating-image{
+   
+    margin-top: 50px;
+    margin-left: px;
+    width:100%;
+     
+  }
+  .rating-text{
+   
+    width: 160px;
+    line-height: 25px;
+    margin-left: 18px;
+  }
+  .rating-text a{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+  }
+  .rating-text a:hover{
+      color: red; 
+  }
+  .fa-checkered{
+    color: rgb(255, 140, 0);
+  }
+.rating-box h2{
+ 
+  height: 30px;
+ 
+}
+
+/* sign up box last section */
+.my-sign-up{
+  
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 50px;
+  margin-left: 350px;
+  padding-top: 25px;
+  line-height: 25px;
+}
+.my-sign-up p{
+  font-size: 13px;
+}
+.my-sign-up button a{
+  text-decoration: none;
+  color: black;
+  font-family: system-ui;
+}
+.my-sign-up button{
+  width: 260px;
+  padding: 5px 0px 5px 0px;
+  background-color: orange;
+  font-weight: bold;
+  border-radius: 5px;
+  border:0.5px solid orangered;
+}
+.my-sign-up span{
+  margin-left: 5px;
+}
+.my-sign-up span a{
+  text-decoration: none;
+  color: #007185;
+}
+.my-sign-up span a:hover{
+  
+  color: red;
+}
+
+/*  last section */
+.last-text-box{
+  background-color: black;
+  height: 400px;
+  padding-top: 50px;
+}
+.main-text-box{
+  
+   height: 305px;
+   padding-top: 0px;
+   display: flex;
+   margin-left: 120px;
+   
+}
+.text-box1{
+ 
+  height: 300px;
+  width: 300px;
+  line-height: 28px;
+  text-align:justify;
+   
+}
+.text-box1 p{
+  margin-left: 90px;
+  color: white;
+  font-size: 13px;
+}
+.text-box1 a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+.text-box1 a:hover{
+  text-decoration: underline;
+}
+.box-bordeer{
+ border: none;
+}
+
+
+/* last image section */
+.second-last{
+  background-color:rgb(29, 5, 48);
+  height: 100px;
+  margin-top: -8px;
+  border-top: .5px solid white;
+  border-bottom: .5px solid white;
+  
+}
+.usd img{
+  margin-top: 25px;
+  margin-left: -29px;
+ 
+}
+.usd{
+ 
+  text-align: center;
+  height: 90px;
+ 
+}
+.usd-img{
+ 
+  width: 160px;
+  margin-left: 400px;
+}
+.usd button{
+  position: relative;
+  top: -48px;
+  margin-left: 10px;
+  padding: 2px 5px 2px 5px;
+}
+.fa-siz{
+  font-size: 15px;
+}
+
+/*  last section */
+.last-box1{
+  background-color:transparent;
+  height: 5px;
+  padding-top:100px;
+}
+.last-box2{
+  background-color:transparent;
+  height: 5px;
+  padding-top:100px;
+}
+.last-box3{
+  background-color:transparent;
+  height: 10px;
+  padding-top:100px;
+}
+.last-4{
+  background-color:transparent;
+  height: 10px;
+  padding-top:100px;
+}
+.last-box5{
+  background-color:transparent;
+  height: 50px;
+  padding-top:100px;
+}
+
+
+.main-text-box1{
+   background-color: transparent;
+   height:0px;
+   padding-top:-10px;
+   display: flex;
+   margin-left: 120px;
+   width: 80%;
+   
+}
+.text-last-box1{
+  background-color: transparent;
+ position: relative;
+ top: -80px;
+  height: 100px;
+  width: 600px;
+  line-height: 18px;
+  text-align:justify;
+   
+}
+.text-last-box1 p{
+  margin-left: 20px;
+  color: white;
+  font-size: 10px;
+}
+.text-last-box1 a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+.text-last-box1 a:hover{
+  text-decoration: underline;
+}
+.box-bordeer{
+ border:none;
+}
+
+/* last copyright box */
+.copyright-box{
+ position: relative;
+ top: -15px;
+ background-color: black;
+  text-align: center;
+ margin-top: 15px;
+  height: 60px;
+  margin-left: -70px;
+}
+.copyright-box p span{
+  padding-left: 70px;
+}
+.copyright-box p img{
+  margin-left: 10px;
+  position: relative;
+  top: 3px;
+}
+.copyright-box p{
+  font-size: 10px;
+  color: white;
+  line-height: 20px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navigation">
+           <div class="nav_logo border" >
+            <div class="logo"></div>
+           </div>
+
+
+           <div class="nav_addres border">
+            <p class="deliver">Deliver to</p>
+            <div class="icon">
+                <i class="fa fa-map-marker"></i> 
+                <p class="india"> India</p>
+            </div>
+           </div>
+
+           <div class="search-box">
+              <select name="" id="" class="search-select">
+                
+            <option value="" class="search-list"><a href="#">All</a></option>
+            <option value=""><a href="#">Arts & Crafts</a></option>
+            <option value=""><a href="#">Automotive</a></option>
+            <option value=""><a href="#">Baby</a></option>
+            <option value=""><a href="#">Beauty</a></option>
+            <option value=""><a href="#">Books</a></option>
+            <option value=""><a href="#">Boys's Fashion</a></option>
+            <option value=""><a href="#">Deals</a></option>
+            <option value=""><a href="#">Digital</a></option>
+            <option value=""><a href="#">Girls</a></option>
+            <option value=""><a href="#">Home</a></option>
+            <option value=""><a href="#">Arts & Crafts</a></option>
+            <option value=""><a href="#">Automotive</a></option>
+            <option value=""><a href="#">Baby</a></option>
+            <option value=""><a href="#">Beauty</a></option>
+            <option value=""><a href="#">Books</a></option>
+            <option value=""><a href="#">Boys's Fashion</a></option>
+            <option value=""><a href="#">Deals</a></option>
+            <option value=""><a href="#">Digital</a></option>
+            <option value=""><a href="#">Girls</a></option>
+            <option value=""><a href="#">Home</a></option>
+              </select>
+              <input type="text" placeholder="Search Amazon" class="search-input">
+                        <div class="serach-icon">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+           </div>
+
+           <div class="language-box border">
+            <img src="https://cdn-icons-png.flaticon.com/128/206/206626.png" alt="" width="20px">
+                          <select name="" id="" class="language-select">
+                            <option value="">EN - English</option>
+                            <option value="Chinese">Ch - Chinese</option>
+                            <option value="Spanish">SP - Spanish</option>
+                            <option value="Arabic">AR - Arabic</option>
+                            <option value="Hindi ">HN - Hindi </option>
+                            <option value="Russian ">RU - Russian </option>
+                            <option value="Japanese ">JP - Japanese </option>
+                          </select>
+           </div>
+             <a href="amazon-_form2.html" style="text-decoration: none;">
+           <div class="signup-box1 border">
+             <p><span>Hello,sign in</span></p>
+               <div style="display: flex;">
+                <p class="style-p" >Account & Lists &nbsp; </p>
+               
+                  <div class="drop-icon">
+                  <i class="fa fa-sort-desc"  ></i>
+                   <ul class="drop-ul">
+                    <a href="amazon-_form2.html"><iframe src="amazon_form.html" frameborder="0" height="1000px" width="1490px"></iframe></a>
+                   </ul>
+                </div>
+               </div>
+              </a>                                       
+        </div>
+
+           <div class="signup-box2 border">
+            <p><span>Returns &nbsp;&nbsp;</span></p>
+            <p class="style-p">& Orders&nbsp;</p>
+          </div>
+
+           <div class="cart border">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <h1>Cart</h1>
+           </div>
+
+
+        </div>
+        <!-- section 2-->
+        <div class="panel">
+                <div class="panel-all border">
+                 <i class="fa fa-bars"></i>&nbsp;&nbsp;All
+                </div>
+                <div class="panel-option">
+                   <p class="border">Today's Deals</p>
+                   <p class="border">Customer Service</p>
+                   <p class="border">Registry</p>
+                   <p class="border">Gifts</p>
+                   <p class="border">Sell</p>
+                </div>
+                <div class="panel-deals border">
+                   Shop Deaks in Electronics
+                </div>
+        </div>
+    </header>
+    <section style="background-color: #e2e7e6; height: 1190px;">
+        <div class="hero-section">
+                <div class="hero-mesge">
+                    <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a href="#">Click here to go to amazon.in</a></p>
+                </div>
+                
+        </div>
+        <!-- shop section start-->
+        <div class="shoping">
+            <div class="box1 box">
+                <div class="box1-content">
+                    <h2>Gaming accessories</h2>
+                    <div class="box1-img1">
+                      <div class="box-img1">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Headset_1x._SY116_CB667159060_.jpg" alt=""width="51%">
+                       
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Keyboard_1x._SY116_CB667159063_.jpg" alt=""width="51%">
+                        
+                      </div>
+                      <div class="name-box1">
+                        <p><a href="#" class="name-acces">Headsets</a></p>
+                        <p><a href="#"class="name-acces">Keyboards</a></p>
+                      </div>
+                    <div class="box-img2"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg" alt="" width="51%">
+                        
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Chair_1x._SY116_CB667159060_.jpg" alt="" width="51%">
+                    </div>
+                    <div class="name-box1">
+                        <p><a href="#"class="name-acces">computer Mice</a></p>
+                        <p><a href="#"class="name-acces">Chairs</a></p>
+                      </div>
+                    </div>
+                    
+                    <p><a href="#" class="content-a">See More</a></p>
+                </div>
+            </div>
+
+            <div class="box2 box">
+                <div class="box1-content">
+                    <h2>Fitness Products</h2>
+                    <div class="box1-img1" style="background-image: url(Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg); margin-left: -15px; height: 330px;" ></div>
+                     <p><a href="#" class="content-a">See More</a></p>
+                </div>
+            </div>
+
+            <div class="box3 box">
+                <div class="box1-content">
+                    <h2>Refresh your space</h2>
+                    <div class="box1-img1">
+                      <div class="box-img1">
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_LP-HP_B08MYX5Q2W_01.23._SY116_CB619238939_.jpg" alt=""width="48%">
+                       
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_home_B08RCCP3HV_01.23._SY116_CB619238939_.jpg" alt=""width="48%">
+                        
+                      </div>
+                      <div class="name-box1">
+                        <p><a href="#" class="name-acces">Dining</a></p>
+                        <p><a href="#"class="name-acces">Home</a></p>
+                      </div>
+                    <div class="box-img2"><img src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_kitchen_B0126LMDFK_01.23._SY116_CB619238939_.jpg" alt="" width="48%">
+                        
+                        <img src="https://images-na.ssl-images-amazon.com/images/G/01/launchpad/2023/Gateway/January/DesktopQuadCat_186x116_health-beauty_B07662GN57_01.23._SY116_CB619238939_.jpg" alt="" width="48%">
+                    </div>
+                    <div class="name-box1">
+                        <p><a href="#"class="name-acces">Kitchen</a></p>
+                        <p><a href="#"class="name-acces">Health and Beauty</a></p>
+                      </div>
+                    </div>
+                    
+                    <p><a href="#" class="content-a">See More</a></p>
+                </div>
+            </div>
+
+            <div class="5 box">
+                 <div class="box1-content">
+                    <h2>Fitness Products</h2>
+                    <div class="box1-img1" style="background-image: url(box1_image.jpg);height: 330px;"></div>
+                    <p><a href="#" class="content-a">See More</a></p></div>
+            </div>
+
+        </div>
+        <!-- shop section end-->
+       <!-- ful box-->
+        <div class="full-box">
+            <div class="shopnow">
+                <h2>Home Décor Under $20</h2> <span><a href="#">Shop Now</a></span>
+            </div>
+                <div class="full-img">
+                    <img src="https://m.media-amazon.com/images/I/613+CG1dP1L._AC_SY200_.jpg" alt=""width="200px">
+                <img src="https://m.media-amazon.com/images/I/61XYX1tzoTL._AC_SY200_.jpg" alt=""width="200px">
+                <img src="https://m.media-amazon.com/images/I/619zifj5htL._AC_SY200_.jpg" alt=""width="200px">
+                <img src="https://m.media-amazon.com/images/I/81AOpcqJfHL._AC_SY200_.jpg" alt=""width="200px">
+                <img src="https://m.media-amazon.com/images/I/81xiJRmOwUL._AC_SY200_.jpg" alt=""width="200px">
+                <img src="https://m.media-amazon.com/images/I/710xU17suIL._AC_SY200_.jpg" alt=""width="200px">
+                
+
+                </div>
+               
+               
+           
+        </div>
+         <!-- full box end-->
+    </section>
+    <section style="background-color: #e2e7e6;">
+       <!-- big box section end-->
+         <div class="big-box">
+          <div class="big-text">
+            <h2>Deals on electronics, gadgets & accessoeries &nbsp;&nbsp;&nbsp;</h2>
+            <p><a href="#">Explore all deals</a></p>
+           </div>
+           <div class="my-box">
+            <div class="big-image">
+              <img src="https://m.media-amazon.com/images/I/31OZRF+lbuL._AC_SY200_.jpg" alt="" width="260px" height="200px">
+                <div class="big-p">
+                  <p class="p1"><span>54% off</span>&nbsp;&nbsp;&nbsp;&nbsp;Deal</p>
+                  <p class="p2"><span>$ <big>11.43</big> List Price <strike>$25.10</strike></span></p>
+                  <p class="p3">Tripp Lite DisplayPort Cable with Latch</p>
+                </div>
+             </div>
+             <div class="big-image">
+              <img src="https://m.media-amazon.com/images/I/41FOC69MhpL._AC_SY200_.jpg" alt="" width="260px" height="200px">
+                <div class="big-p">
+                  <p class="p1"><span>54% off</span>&nbsp;&nbsp;&nbsp;&nbsp;Deal</p>
+                  <p class="p2"><span>$ <big>11.43</big> List Price <strike>$25.10</strike></span></p>
+                  <p class="p3">Tripp Lite DisplayPort Cable with Latch</p>
+                </div>
+             </div>
+             <div class="big-image">
+              <img src="https://m.media-amazon.com/images/I/314Uqze+acL._AC_SY200_.jpg" alt="" width="260px" height="200px">
+                <div class="big-p">
+                  <p class="p1"><span>54% off</span>&nbsp;&nbsp;&nbsp;&nbsp;Deal</p>
+                  <p class="p2"><span>$ <big>11.43</big> List Price <strike>$25.10</strike></span></p>
+                  <p class="p3">Tripp Lite DisplayPort Cable with Latch</p>
+                </div>
+             </div>
+             <div class="big-image">
+              <img src="https://m.media-amazon.com/images/I/41wvQ72iFVL._AC_SY200_.jpg" alt="" width="260px" height="200px">
+                <div class="big-p">
+                  <p class="p1"><span>54% off</span>&nbsp;&nbsp;&nbsp;&nbsp;Deal</p>
+                  <p class="p2"><span>$ <big>11.43</big> List Price <strike>$25.10</strike></span></p>
+                  <p class="p3">Tripp Lite DisplayPort Cable with Latch</p>
+                </div>
+             </div>
+             <div class="big-image">
+              <img src="https://m.media-amazon.com/images/I/514+BS6Zj7L._AC_SY200_.jpg" alt="" width="260px" height="200px">
+                <div class="big-p">
+                  <p class="p1"><span>54% off</span>&nbsp;&nbsp;&nbsp;&nbsp;Deal</p>
+                  <p class="p2"><span>$ <big>11.43</big> List Price <strike>$25.10</strike></span></p>
+                  <p class="p3">Tripp Lite DisplayPort Cable with Latch</p>
+                </div>
+             </div>
+           </div>
+           
+          </div>
+
+         </div>
+          <!-- big box section end-->
+    </section>
+     <section style="background-color: #e2e7e6; height: 500px;">
+      <!-- shop section 2 stat-->
+      <div class="shoping">
+        <div class="box1 box">
+            <div class="box1-content">
+                <h2>Watches for Men</h2>
+                <div class="box1-img1">
+                  <div class="box-img1">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/61jiGPaT7YL._AC_UL160_SR160,160_.jpg" alt=""width="39%" height="120px">
+                   
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71rjKFT3DwL._AC_UL160_SR160,160_.jpg" alt=""width="39%"height="120px">
+                    
+                  </div>
+                  <div class="name-box1">
+                    <p style="margin-left: -21px; margin-top: -5px;"> <a href="#" class="name-acces">Waterproof &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+                    <p style="margin-left: 0px; margin-top: -5px;"><a href="#"class="name-acces">Smart</a></p>
+                  </div>
+                <div class="box-img2"><img src="https://m.media-amazon.com/images/I/41IR4IOhVLL._AC_SR320,320_.jpg" alt="" width="39%"height="120px">
+                    
+                    <img src="https://m.media-amazon.com/images/I/51cC7FEtAHL._AC_SR160,160_.jpg" alt="" width="39%"height="120px">
+                </div>
+                <div class="name-box1">
+                    <p style="margin-left: -21px; margin-top: -10px;"><a href="#"class="name-acces">Premium</a></p>
+                    <p style="margin-left: -0px; margin-top: -5px;"><a href="#"class="name-acces">Luxiry</a></p>
+                  </div>
+                </div>
+                
+                <p><a href="#" class="content-a">See More</a></p>
+            </div>
+        </div>
+
+        <div class="box2 box">
+            <div class="box1-content">
+                <h2>Gaming Desktop PC</h2>
+                <div class="box1-img1" style="background-image: url(https://m.media-amazon.com/images/I/71m-rpjxqSL._AC_UY327_FMwebp_QL65_.jpg); margin-left: 10px; height: 330px; width: 85%;" ></div>
+                 <p><a href="#" class="content-a">See More</a></p>
+            </div>
+        </div>
+
+        <div class="box3 box">
+            <div class="box1-content">
+                <h2>Shop deals in Fashion</h2>
+                <div class="box1-img1">
+                  <div class="box-img1">
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_BOTTOMS_1x._SY116_CB624172947_.jpg" alt=""width="48%" height="110px">
+                   
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_TOPS_1x._SY116_CB623353881_.jpg" alt=""width="48%"height="110px">
+                    
+                  </div>
+                  <div class="name-box1">
+                    <p><a href="#" class="name-acces">Jeans under $50</a></p>
+                    <p><a href="#"class="name-acces">Tops under $25</a></p>
+                  </div>
+                <div class="box-img2"><img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_SHOES_1x._SY116_CB624172947_.jpg" alt=""height="110px" width="48%">
+                    
+                    <img src="https://images-na.ssl-images-amazon.com/images/G/01/AMAZON_FASHION/2022/SITE_FLIPS/SPR_22/GW/DQC/DQC_APR_TBYB_W_DRESSES_1x._SY116_CB623353881_.jpg" alt="" height="110px"width="48%">
+                </div>
+                <div class="name-box1">
+                    <p><a href="#"class="name-acces">Dresses under $30</a></p>
+                    <p><a href="#"class="name-acces"> Shoes under $50</a></p>
+                  </div>
+                </div>
+                
+                <p><a href="#" class="content-a">See More</a></p>
+            </div>
+        </div>
+
+        <div class="5 box">
+             <div class="box1-content">
+                <h2>Find your ideal TV</h2>
+                <div class="box1-img1" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_TV_2X._SY304_CB432517900_.jpg);height: 330px; width: 100%;"></div>
+                <p><a href="#" class="content-a">See More</a></p></div>
+        </div>
+
+    </div>
+    <!-- shop section 2 end-->
+     </section>
+     <!-- single image box section -->
+     <section style="background-color: #e2e7e6; height: 330px;">
+      
+                      <div class="single-imge">
+                        <div class="single-box-text">
+                          <h2>Exciting deals <Span><a href="#">See all Deals</a></Span></h2> 
+                        </div>
+                        <div class="images-box">
+                        <img src="https://m.media-amazon.com/images/I/51BgGlkp7tL._AC_SY200_.jpg" alt=""width="140px" height="190px">
+                        <img src="https://m.media-amazon.com/images/I/51zQhLbJNNL._AC_SY200_.jpg" alt=""width="190px" height="190px">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/91639QoCVBL._AC_UL232_SR232,232_.jpg" alt=""width="190px" height="190px">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/A1bc9KkHtsL._AC_UL200_SR200,200_.jpg" alt=""width="190px" height="190px">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81DqhvFVhJL._AC_UL200_SR200,200_.jpg" alt=""width="190px" height="190px">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81SZAvnMvTL._AC_UL160_SR160,160_.jpg" alt=""width="190px" height="190px">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/81ESjZBLHBL._AC_UL160_SR160,160_.jpg" alt=""width="190px" height="190px">
+                        <img src="https://m.media-amazon.com/images/I/31TyU3zJ9ZL._AC_SY200_.jpg" alt=""width="120px" height="190px">
+
+                        </div>
+                      </div>
+     </section>
+     <!--- Rating box-->
+     <section style="background-color: #e2e7e6; height: 410px;">
+           <div class="rating-box">
+                 
+                  
+                 
+               <div class="rating-image">
+                 <img src="https://images-na.ssl-images-amazon.com/images/I/815NQkU4PDL._AC_UL160_SR160,160_.jpg" alt="">
+                   <div class="rating-text">
+                    <a href="#">Zero days</a> <br> 
+                 <a href="#">> Roth Ware</a> <br>
+                 <i class="fa fa-star fa-checkered"></i>
+                 <i class="fa fa-star fa-checkered"></i>
+                 <i class="fa fa-star fa-checkered"></i>
+                 <i class="fa fa-star fa-checkered"></i>
+                 <i class="fa fa-star-half-empty fa-checkered"></i>1,110
+                 <p>Hardcover</p>
+                 <p>$ <big>20.98</big></p>
+                 <p style="font-size: 12px;">$13.17 shipping</p>
+                   </div>   
+               </div>
+
+
+               <div class="rating-image">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/81ESjZBLHBL._AC_UL160_SR160,160_.jpg" alt="">
+                  <div class="rating-text">
+                   <a href="#">The House Acros </a> <br> 
+                <a href="#">> Riley sagare</a> <br>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star-half-empty fa-checkered "></i>12,446
+                <p>Hardcover</p>
+                <p>$ <big>10.34</big></p>
+                <p style="font-size: 12px;">$11.84 shipping</p>
+                  </div>   
+              </div>
+
+
+              <div class="rating-image">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/91ptz+cwsjL._AC_UL160_SR160,160_.jpg" alt="">
+                  <div class="rating-text">
+                   <a href="#">The Last Time </a> <br> 
+                <a href="#">> Riley Sagar</a> <br>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star-half-full fa-checkered"></i>1,110
+                <p>Hardcover</p>
+                <p>$ <big>15.59</big></p>
+                <p style="font-size: 12px;">$12.08 shipping</p>
+                  </div>   
+              </div>
+
+
+
+              <div class="rating-image">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/81FfjUOy6uL._AC_UL160_SR160,160_.jpg" alt="">
+                  <div class="rating-text">
+                   <a href="#">The spare Room</a> <br> 
+                <a href="#">>  Andrea Bartz</a> <br>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star "></i>
+                <i class="fa fa-star "></i>206
+                <p>Hardcover</p>
+                <p>$ <big>20.98</big></p>
+                <p style="font-size: 12px;">$13.17 shipping</p>
+                  </div>   
+              </div>
+
+
+
+              <div class="rating-image">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/81mzWdNZCtL._AC_UL160_SR160,160_.jpg" alt="">
+                  <div class="rating-text">
+                   <a href="#">Survive the Night</a> <br> 
+                <a href="#">> Relay Sagar</a> <br>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star-half-full fa-checkered"></i>7,760
+                <p>Hardcover</p>
+                <p>$ <big>20.29</big></p>
+                <p style="font-size: 12px;">$13.17 shipping</p>
+                  </div>   
+              </div>
+
+
+
+
+
+              <div class="rating-image">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/91UKAASiqDL._AC_UL160_SR160,160_.jpg" alt="">
+                  <div class="rating-text">
+                   <a href="#">Lock Every Door </a> <br> 
+                <a href="#">> Riley sagar</a> <br>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star-half-empty fa-checkered"></i>
+                <i class="fa fa-star "></i>
+                <i class="fa fa-star"></i>14,060
+                <p>Hardcover</p>
+                <p>$ <big>13.99</big></p>
+                <p style="font-size: 12px;">$11.95 shipping</p>
+                  </div>   
+              </div>
+
+
+              <div class="rating-image">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/81SZAvnMvTL._AC_UL160_SR160,160_.jpg" alt="">
+                  <div class="rating-text">
+                   <a href="#">Home Before Dark</a> <br> 
+                <a href="#">> Riley sagar</a> <br>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star fa-checkered"></i>
+                <i class="fa fa-star-half-full fa-checkered"></i>13,693
+                <p>Hardcover</p>
+                <p>$ <big>9.41</big></p>
+                <p style="font-size: 12px;">$11.82 shipping</p>
+                  </div>   
+              </div>
+
+           </div>
+     </section>
+     <section style="background-color: #e2e7e6; height: 470px;">
+      <div style="background-color: #e2e7e6;height: 480px;">
+            <div class="main-box"  style="background-color:#e2e7e6; overflow:auto; display: flex;">
+                <div class="boxxx" style="display: flex;">
+                      <div class="scroll-box1 box" style="width: 300px; height: 400px;margin-left:10px; ">
+                            <div class="box1-content">
+                                <h2>smartwatches</h2>
+                                     <div class="box1-img1" style="background-image: url(https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/September/DashboardCards/Fuji_Dash_SmartWatch_1X._SY304_CB639922137_.jpg); margin-left: -1px; height: 330px;" ></div>
+                                         <p><a href="#" class="content-a">See More</a></p>
+                                      </div>
+                            </div>
+
+
+
+                            <div class="scroll-box1 box" style="width: 300px; height: 400px;padding-left: 25px;">
+                              <div class="box1-content">
+                                  <h2>Headphones</h2>
+                                       <div class="box1-img1" style="background-image: url(https://m.media-amazon.com/images/I/71CeAaMh-RL._AC_UL600_FMwebp_QL65_.jpg); margin-left: -15px; height: 330px;" ></div>
+                                           <p><a href="#" class="content-a">See More</a></p>
+                                        </div>
+                              </div>
+
+                              <div class="scroll-box1 box" style="width: 300px; height: 400px;padding-left: 25px;">
+                                <div class="box1-content">
+                                    <h2>Iron Man Electronic</h2>
+                                         <div class="box1-img1" style="background-image: url(https://m.media-amazon.com/images/I/81Y8fJUpbWL._AC_UL600_FMwebp_QL65_.jpg); margin-left: -15px; height: 330px;" ></div>
+                                             <p><a href="#" class="content-a">See More</a></p>
+                                          </div>
+                                </div>
+
+                                <div class="scroll-box1 box" style="width: 300px; height: 400px;padding-left: 25px;">
+                                  <div class="box1-content">
+                                      <h2>Bluetooth Speaker</h2>
+                                           <div class="box1-img1" style="background-image: url(https://m.media-amazon.com/images/I/81djh1gfUwL._AC_UL600_QL65_.jpg); margin-left: -15px; height: 330px;" ></div>
+                                               <p><a href="#" class="content-a">See More</a></p>
+                                            </div>
+                                  </div>
+
+
+                                  <div class="scroll-box1 box" style="width: 300px; height: 400px;padding-left: 25px;">
+                                    <div class="box1-content">
+                                        <h2>Fitness Products</h2>
+                                             <div class="box1-img1" style="background-image: url(/image/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg); margin-left: -15px; height: 330px;" ></div>
+                                                 <p><a href="#" class="content-a">See More</a></p>
+                                              </div>
+                                    </div>
+
+
+                                    <div class="scroll-box1 box" style="width: 300px; height: 400px;padding-left: 25px;">
+                                      <div class="box1-content">
+                                          <h2>Handheld Gaming System</h2>
+                                               <div class="box1-img1" style="background-image: url(https://m.media-amazon.com/images/I/81hBriWxQ+L._AC_UL600_QL65_.jpg); margin-left: -15px; height: 330px;" ></div>
+                                                   <p><a href="#" class="content-a">See More</a></p>
+                                                </div>
+                                      </div>
+
+
+                                      <div class="scroll-box1 box" style="width: 300px; height: 400px;padding-left: 25px;">
+                                        <div class="box1-content">
+                                            <h2>Hearing Protection</h2>
+                                                 <div class="box1-img1" style="background-image: url(https://m.media-amazon.com/images/I/81Hf-zUBjdL._AC_UL600_QL65_.jpg); margin-left: -15px; height: 330px;" ></div>
+                                                     <p><a href="#" class="content-a">See More</a></p>
+                                                  </div>
+                                        </div>
+
+
+
+                                        <div class="scroll-box1 box" style="width: 300px; height: 400px;padding-left: 25px;">
+                                          <div class="box1-content">
+                                              <h2>Coin Microscope</h2>
+                                                   <div class="box1-img1" style="background-image: url(https://m.media-amazon.com/images/I/61PdD2COAuL._AC_UL600_FMwebp_QL65_.jpg); margin-left: -15px; height: 330px;" ></div>
+                                                       <p><a href="#" class="content-a">See More</a></p>
+                                                    </div>
+                                          </div>
+
+
+
+                                          <div class="scroll-box1 box" style="width: 300px; height: 400px;padding-left: 25px;">
+                                            <div class="box1-content">
+                                                <h2>Electric Lighter</h2>
+                                                     <div class="box1-img1" style="background-image: url(https://m.media-amazon.com/images/I/51-Grj8CCUL._AC_UL600_QL65_.jpg); margin-left: -15px; height: 330px;" ></div>
+                                                         <p><a href="#" class="content-a">See More</a></p>
+                                                      </div>
+                                            </div>
+
+
+
+                                            <div class="scroll-box1 box" style="width: 300px; height: 400px;padding-left: 25px;">
+                                              <div class="box1-content">
+                                                  <h2>Coin Microscope</h2>
+                                                       <div class="box1-img1" style="background-image: url(https://m.media-amazon.com/images/I/61PdD2COAuL._AC_UL600_FMwebp_QL65_.jpg); margin-left: -15px; height: 330px;" ></div>
+                                                           <p><a href="#" class="content-a">See More</a></p>
+                                                        </div>
+                                              </div>
+
+
+
+
+                                              <div class="scroll-box1 box" style="width: 300px; height: 400px;padding-left: 25px;">
+                                                <div class="box1-content">
+                                                    <h2>Fingerprint Door Lock</h2>
+                                                         <div class="box1-img1" style="background-image: url(https://m.media-amazon.com/images/I/61AMAnjikAL._AC_UL600_QL65_.jpg); margin-left: -15px; height: 330px;" ></div>
+                                                             <p><a href="#" class="content-a">See More</a></p>
+                                                          </div>
+                                                </div>
+
+
+
+                                                <div class="scroll-box1 box" style="width: 300px; height: 400px;padding-left: 25px;">
+                                                  <div class="box1-content">
+                                                      <h2>Fitness Products</h2>
+                                                           <div class="box1-img1" style="background-image: url(/image/Fuji_Dash_Electronics_1x._SY304_CB432774322_.jpg); margin-left: -15px; height: 330px;" ></div>
+                                                               <p><a href="#" class="content-a">See More</a></p>
+                                                            </div>
+                                                  </div>
+
+
+                                                  
+   </div>
+</div>
+      </div>
+     </section>
+     <hr>
+     <!-- last sign up section start-->
+            <section  style="background-color: white; height: 140px;">
+                 <div class="my-sign-up">
+                   <p>See personalized recommendations</p>
+                   <button type="submit"><a href="/html code/amazon-_form2.html">Sign in</a></button>
+                  <p><span>New customer ? <a href="#">Start here</a></span></p>
+                 </div>
+                 <br>
+                 <hr>
+            </section>
+             <!-- last sign up section end-->
+             <section style="background-color: #e2e7e6; height: 58px;">
+              <div style="background-color: #37475A; height: 58px;">
+                             <p style="text-align: center;padding-top: 20px;margin-left: -85px; font-size: 14px;"> <a href="#" style="color: white;text-decoration: none;">Back to top</a></p>
+              </div>
+             </section>
+
+              <!--- last box -->
+             <section >
+
+                              <div class="last-text-box">
+                                        <div class="main-text-box">
+                                          <div class="text-box1 box-bordeer">
+                                             <p style="font-weight: bold;">Get to Know Us</p>
+                                             <p><a href="#">Careers</a></p>
+                                             <p><a href="#">Blog</a></p>
+                                             <p><a href="#">About Amazon</a></p>
+                                             <p><a href="#">Investor Relations</a></p>
+                                             <p><a href="#">Amazon Devices</a></p>
+                                             <p><a href="#">Amazon Science</a></p>
+
+                                          </div>
+                                        <div class="text-box1 box-bordeer ">
+                                          <p style="font-weight: bold;">Make Money with Us</p>
+                                          <p><a href="#">Sell products on Amazon</a></p>
+                                          <p><a href="#">Sell on Amazon Business</a></p>
+                                          <p><a href="#">Sell apps on Amazon</a></p>
+                                          <p><a href="#">Become an Affliate</a></p>
+                                          <p><a href="#">Advertise Your Products</a></p>
+                                          <p><a href="#">Self-Publish with us</a></p>
+                                          <p><a href="#">Host an Amazon Hub</a></p>
+                                          <p><a href="#">> See More Make Money With Us</a></p>
+                                        </div>
+                                        <div class="text-box1 box-bordeer">
+                                          <p style="font-weight: bold;">Amazon Payment Products</p>
+                                          <p><a href="#">Amazon Business Card</a></p>
+                                          <p><a href="#">Shop with Points</a></p>
+                                          <p><a href="#">Reload Your Balance</a></p>
+                                          <p><a href="#">Amazon Currency Converter</a></p>
+                                          
+                                        </div>
+                                        <div class="text-box1 box-bordeer">
+                                          <p style="font-weight: bold;">Let Us Help You </p>
+                                            <p><a href="#">Amazon and COVID-19</a></p>
+                                          <p><a href="#">Your Account</a></p>
+                                          <p><a href="#">Your Orders</a></p>
+                                          <p><a href="#">Shipping Rates & Policies</a></p>
+                                          <p><a href="#">Returns & Replacements</a></p>
+                                          <p><a href="#">Manage Your Content and Devices</a></p>
+                                          <p><a href="#">Amazon Assistant</a></p>
+                                          <p><a href="#">Help</a></p>
+                                        </div>
+                                        </div>
+                                        <div class="second-last">
+                                           <div class="usd">
+                                             <div class="usd-img"><img src="/image/amazon_logo.png" alt="" width="100px"></div>
+                                          <button type="submit"><i class="fa fa-globe fa-siz" aria-hidden="true"></i> English</button>
+                                          <button type="submit"><i class="fa fa-dollar fa-siz"></i> USD-U.S Dollar</button>
+                                          <button type="submit"><i class="fa fa-flag fa-siz"></i> United States</button>
+                                           </div>
+                                        </div>
+                                        
+                              </div>
+
+
+
+                    <!--- last last -->         
+              <section  style="background-color: black;">
+                  <div class="last-box1">
+                    <div class="main-text-box1">
+                      <div class="text-last-box1 box-bordeer">
+                         <p style="font-weight: bold;">Amazon Music</p>
+                          <p><a href="#">Stream millions</a></p>
+                         <p><a href="#">of songs</a></p>
+                         </div>
+
+                         <div class="text-last-box1 box-bordeer ">
+                          <p style="font-weight: bold;">Amazon Advertising
+                            Find
+                            </p>
+                          <p><a href="#">attract</a></p>
+                          <p><a href="#">engage customers</a></p>
+                           </div>
+
+                           <div class="text-last-box1 box-bordeer ">
+                            <p style="font-weight: bold;">Amazon Advertising
+                              Find
+                              </p>
+                            <p><a href="#">attract</a></p>
+                            <p><a href="#">engage customers</a></p>
+            
+                          </div>
+
+
+                          <div class="text-last-box1 box-bordeer ">
+                            <p style="font-weight: bold;">Amazon Advertising
+                              Find
+                              </p>
+                            <p><a href="#">attract</a></p>
+                            <p><a href="#">engage customers</a></p>
+            
+                          </div>
+
+
+                          <div class="text-last-box1 box-bordeer ">
+                            <p style="font-weight: bold;">Amazon Advertising
+                              Find
+                              </p>
+                            <p><a href="#">attract</a></p>
+                            <p><a href="#">engage customers</a></p>
+            
+                          </div>
+
+
+                          <div class="text-last-box1 box-bordeer ">
+                            <p style="font-weight: bold;">Amazon Advertising
+                              Find
+                              </p>
+                            <p><a href="#">attract</a></p>
+                            <p><a href="#">engage customers</a></p>
+            
+                          </div>
+
+
+                          <div class="text-last-box1 box-bordeer ">
+                            <p style="font-weight: bold;">Amazon Advertising
+                              Find
+                              </p>
+                            <p><a href="#">attract</a></p>
+                            <p><a href="#">engage customers</a></p>
+            
+                          </div>
+                    </div>
+                    
+                  </div>
+                  
+              </section>
+
+
+              <!--- last last  2 -->         
+              <section  style="background-color: black;">
+                <div class="last-box2">
+                  <div class="main-text-box1">
+                    <div class="text-last-box1 box-bordeer">
+                       <p style="font-weight: bold;">Amazon Music</p>
+                        <p><a href="#">Stream millions</a></p>
+                       <p><a href="#">of songs</a></p>
+                       </div>
+
+                       <div class="text-last-box1 box-bordeer ">
+                        <p style="font-weight: bold;">Amazon Advertising
+                          Find
+                          </p>
+                        <p><a href="#">attract</a></p>
+                        <p><a href="#">engage customers</a></p>
+                         </div>
+
+                         <div class="text-last-box1 box-bordeer ">
+                          <p style="font-weight: bold;">Amazon Advertising
+                            Find
+                            </p>
+                          <p><a href="#">attract</a></p>
+                          <p><a href="#">engage customers</a></p>
+          
+                        </div>
+
+
+                        <div class="text-last-box1 box-bordeer ">
+                          <p style="font-weight: bold;">Amazon Advertising
+                            Find
+                            </p>
+                          <p><a href="#">attract</a></p>
+                          <p><a href="#">engage customers</a></p>
+          
+                        </div>
+
+
+                        <div class="text-last-box1 box-bordeer ">
+                          <p style="font-weight: bold;">Amazon Advertising
+                            Find
+                            </p>
+                          <p><a href="#">attract</a></p>
+                          <p><a href="#">engage customers</a></p>
+          
+                        </div>
+
+
+                        <div class="text-last-box1 box-bordeer ">
+                          <p style="font-weight: bold;">Amazon Advertising
+                            Find
+                            </p>
+                          <p><a href="#">attract</a></p>
+                          <p><a href="#">engage customers</a></p>
+          
+                        </div>
+
+
+                        <div class="text-last-box1 box-bordeer ">
+                          <p style="font-weight: bold;">Amazon Advertising
+                            Find
+                            </p>
+                          <p><a href="#">attract</a></p>
+                          <p><a href="#">engage customers</a></p>
+          
+                        </div>
+                  </div>
+                  
+                </div>
+                
+            </section>
+
+
+            <!--- last last -->         
+            <section  style="background-color: black;">
+              <div class="last-box3">
+                <div class="main-text-box1">
+                  <div class="text-last-box1 box-bordeer">
+                     <p style="font-weight: bold;">Amazon Music</p>
+                      <p><a href="#">Stream millions</a></p>
+                     <p><a href="#">of songs</a></p>
+                     </div>
+
+                     <div class="text-last-box1 box-bordeer ">
+                      <p style="font-weight: bold;">Amazon Advertising
+                        Find
+                        </p>
+                      <p><a href="#">attract</a></p>
+                      <p><a href="#">engage customers</a></p>
+                       </div>
+
+                       <div class="text-last-box1 box-bordeer ">
+                        <p style="font-weight: bold;">Amazon Advertising
+                          Find
+                          </p>
+                        <p><a href="#">attract</a></p>
+                        <p><a href="#">engage customers</a></p>
+        
+                      </div>
+
+
+                      <div class="text-last-box1 box-bordeer ">
+                        <p style="font-weight: bold;">Amazon Advertising
+                          Find
+                          </p>
+                        <p><a href="#">attract</a></p>
+                        <p><a href="#">engage customers</a></p>
+        
+                      </div>
+
+
+                      <div class="text-last-box1 box-bordeer ">
+                        <p style="font-weight: bold;">Amazon Advertising
+                          Find
+                          </p>
+                        <p><a href="#">attract</a></p>
+                        <p><a href="#">engage customers</a></p>
+        
+                      </div>
+
+
+                      <div class="text-last-box1 box-bordeer ">
+                        <p style="font-weight: bold;">Amazon Advertising
+                          Find
+                          </p>
+                        <p><a href="#">attract</a></p>
+                        <p><a href="#">engage customers</a></p>
+        
+                      </div>
+
+
+                      <div class="text-last-box1 box-bordeer ">
+                        <p style="font-weight: bold;">Amazon Advertising
+                          Find
+                          </p>
+                        <p><a href="#">attract</a></p>
+                        <p><a href="#">engage customers</a></p>
+        
+                      </div>
+                </div>
+                
+              </div>
+              
+          </section>
+
+
+          <!--- last last 4-->         
+          <section  style="background-color: black;">
+            <div class="last-4">
+              <div class="main-text-box1">
+                <div class="text-last-box1 box-bordeer">
+                   <p style="font-weight: bold;">Amazon Music</p>
+                    <p><a href="#">Stream millions</a></p>
+                   <p><a href="#">of songs</a></p>
+                   </div>
+
+                   <div class="text-last-box1 box-bordeer ">
+                    <p style="font-weight: bold;">Amazon Advertising
+                      Find
+                      </p>
+                    <p><a href="#">attract</a></p>
+                    <p><a href="#">engage customers</a></p>
+                     </div>
+
+                     <div class="text-last-box1 box-bordeer ">
+                      <p style="font-weight: bold;">Amazon Advertising
+                        Find
+                        </p>
+                      <p><a href="#">attract</a></p>
+                      <p><a href="#">engage customers</a></p>
+      
+                    </div>
+
+
+                    <div class="text-last-box1 box-bordeer ">
+                      <p style="font-weight: bold;">Amazon Advertising
+                        Find
+                        </p>
+                      <p><a href="#">attract</a></p>
+                      <p><a href="#">engage customers</a></p>
+      
+                    </div>
+
+
+                    <div class="text-last-box1 box-bordeer ">
+                      <p style="font-weight: bold;">Amazon Advertising
+                        Find
+                        </p>
+                      <p><a href="#">attract</a></p>
+                      <p><a href="#">engage customers</a></p>
+      
+                    </div>
+
+
+                    <div class="text-last-box1 box-bordeer ">
+                      <p style="font-weight: bold;">Amazon Advertising
+                        Find
+                        </p>
+                      <p><a href="#">attract</a></p>
+                      <p><a href="#">engage customers</a></p>
+      
+                    </div>
+
+
+                    <div class="text-last-box1 box-bordeer ">
+                      <p style="font-weight: bold;">Amazon Advertising
+                        Find
+                        </p>
+                      <p><a href="#">attract</a></p>
+                      <p><a href="#">engage customers</a></p>
+      
+                    </div>
+              </div>
+              
+            </div>
+            
+        </section>
+
+
+        <!--- last last 5 -->         
+        <section  style="background-color: black;">
+          <div class="last-box5">
+            <div class="main-text-box1">
+              <div class="text-last-box1 box-bordeer">
+                 <p style="font-weight: bold;">Amazon Music</p>
+                  <p><a href="#">Stream millions</a></p>
+                 <p><a href="#">of songs</a></p>
+                 </div>
+
+                 <div class="text-last-box1 box-bordeer ">
+                  <p style="font-weight: bold;">Amazon Advertising
+                    Find
+                    </p>
+                  <p><a href="#">attract</a></p>
+                  <p><a href="#">engage customers</a></p>
+                   </div>
+
+                   <div class="text-last-box1 box-bordeer ">
+                    <p style="font-weight: bold;">Amazon Advertising
+                      Find
+                      </p>
+                    <p><a href="#">attract</a></p>
+                    <p><a href="#">engage customers</a></p>
+    
+                  </div>
+
+
+                  <div class="text-last-box1 box-bordeer ">
+                    <p style="font-weight: bold;">Amazon Advertising
+                      Find
+                      </p>
+                    <p><a href="#">attract</a></p>
+                    <p><a href="#">engage customers</a></p>
+    
+                  </div>
+
+
+                  <div class="text-last-box1 box-bordeer ">
+                    <p style="font-weight: bold;">Amazon Advertising
+                      Find
+                      </p>
+                    <p><a href="#">attract</a></p>
+                    <p><a href="#">engage customers</a></p>
+    
+                  </div>
+
+
+                  <div class="text-last-box1 box-bordeer ">
+                    <p style="font-weight: bold;">Amazon Advertising
+                      Find
+                      </p>
+                    <p><a href="#">attract</a></p>
+                    <p><a href="#">engage customers</a></p>
+    
+                  </div>
+
+
+                  <div class="text-last-box1 box-bordeer ">
+                    <p style="font-weight: bold;">Amazon Advertising
+                      Find
+                      </p>
+                    <p><a href="#">attract</a></p>
+                    <p><a href="#">engage customers</a></p>
+    
+                  </div>
+            </div>
+            
+          </div>
+          
+      </section>
+
+
+        
+
+        <section  style="background-color: black;">
+                   <!---2nd  last box  no 6 start-->
+              <div class="copyright-box">
+                <p><span>Conditions of Use</span><span>Privacy Notice</span><span> Your Ads Privacy Choices</span><img src="https://cdn-icons-png.flaticon.com/128/3874/3874068.png" alt="" width="17px"></p>
+                <p>© 1996-2023,&nbsp; Amazon.com,&nbsp;Inc. &nbsp;or &nbsp;its affiliates</p>
+             </div>
+             <!---2nd  last box  no 5 end-->
+        </section>
+             
+     
+</body>
+</html>

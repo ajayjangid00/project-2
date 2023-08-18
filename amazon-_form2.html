@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+    <style>
+        *{
+            font-family: system-ui;
+            
+        }
+        .amazon-box{
+            background-color: white;
+            border: 1px solid black;
+            height: 520px;
+        }
+        .box-img{
+           
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            position: relative;
+            top: 12px;
+            height: 60px;
+        }
+        .sign-in-box{
+            height: 310px;
+            background-color:white;
+            border: 1px solid black;
+            width: 30%;
+            text-align: left;
+            padding-left: 25px;
+            margin-left: 500px;
+            position: relative;
+            top: 25px;
+        }
+        .sign-in-text{
+            padding-top: -2px;
+            font-size: 35px;
+            margin-top: 25px;
+        }
+        .email{
+            margin-top:-18px;
+            font-weight:600;
+            
+        }
+        .sign-in-box input{
+            width: 370px;
+            position: relative;
+            top: -10px;
+            height: 25px;
+        }
+        .sign-in-box button{
+            width: 377px;
+            background-color:rgb(254, 218, 13);
+            border: none;
+            border-radius: 8px;
+            position: relative;
+            height: 30px;
+        }
+        .sign-in-box input{
+            width: 370px;
+            position: relative;
+            top: -10px;
+            border: 1px solid black;
+            height: 29px;
+        }
+        .private-text{
+            font-size: 16px;
+        }
+        .private-text a{
+text-decoration: none;
+        }
+        a:hover{
+            color: red;
+        }
+        .need-help a{
+            font-size: 15px;
+            text-decoration: none;
+        }
+        .need-help a:hover{
+            color: red;
+        }
+        fieldset{
+            border-bottom: none;
+            border-left: none;
+            border-right: none;
+            width: 30%;
+           position: relative;
+           left: 489px;
+           margin-top: 50px;
+        }
+       fieldset button{
+        background-color: white;
+        border: 1px solid black;
+            width: 452px;
+            font-weight:600;
+           border-radius: 8px;
+           margin-left: -8px;
+           margin-top: 15px;
+            position: relative;
+            height: 34px;
+        }
+        .copyright-text p{
+            text-align: center;
+            margin-left: -59px;
+            font-size: 15px;
+        }
+        .copyright-text a{
+            text-decoration: none;
+            padding-left: 50px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="amazon-box">
+          <div class="box-img">
+            <img src="/image/amazon-logo-inverse.svg" alt="" width="100px">
+          </div>
+
+          <div class="sign-in-box">
+                  <p class="sign-in-text">Sign in</p>
+                  <p class="email">Email or mobile phone number</p>
+                  <input type="text"> <br>
+                  <button type="submit">Continue</button>
+                  <p class="private-text">By continuing, you agree to Amazon's  <a href="#">Conditions of  <br>Use and Privacy Notice</a>.</p>
+                  <p class="need-help"><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="#">Need Help ?</a></p>
+          </div>
+
+          <fieldset>
+            <legend style="text-align: center;">New to Amazon ?</legend>
+            <button type="submit">Create your Amazon account
+                </button>
+          </fieldset>
+    </div>
+
+    <div class="copyright-text">
+        <p><a href="#">Conditions of Use </a><a href="#">Privacy Notice</a><a href="#">Help</a></p>
+        <p style="margin-left: -5px; font-size: 14px;">© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+    </div>
+</body>
+</html>
